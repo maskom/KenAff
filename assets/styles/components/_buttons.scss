@@ -1,0 +1,13 @@
+.btn-main {
+  background-color: $red2;
+  text-align: center;
+  font-family: $font-family-Oswald;
+  padding: 3px 15px;
+  color: $white;
+  font-weight: 300;
+
+  @include hover () {
+    text-decoration: none;
+    color: $white;
+  }
+}

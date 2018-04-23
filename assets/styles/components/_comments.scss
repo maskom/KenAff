@@ -1,0 +1,54 @@
+#comments {
+  margin-top: 50px;
+}
+.comment-metadata {
+  color: $grey2;
+  font-size: rem(13);
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  a {
+    color: $grey2;
+  }
+}
+.comment-list {
+  margin: 35px 0px;
+  @extend .list-unstyled;
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  .comment {
+    .media-body {
+      padding-left: 20px;
+    }
+    .media-heading {
+      margin-bottom: 0px;
+    }
+    .comment-content {
+      margin-top: 20px;
+    }
+  }
+
+}
+.comment-list ol {
+  list-style: none;
+}
+.comment-form p {
+  @extend .form-group;
+}
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  @extend .form-control;
+}
+.comment-form input[type="submit"] {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+.comment-reply-link {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
