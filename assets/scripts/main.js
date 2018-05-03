@@ -28,7 +28,7 @@
         var didScroll;
         var lastScrollTop = 0;
         var delta = 5;
-        var navbarHeight = $('.header-bottom').outerHeight();
+        var navbarHeight = $('.header-top').outerHeight();
 
         $(window).scroll(function(event){
           didScroll = true;
@@ -47,11 +47,11 @@
           // This is necessary so you never see what is "behind" the navbar.
           if (st > lastScrollTop && st > navbarHeight){
             // Scroll Down
-            $('.header-bottom').removeClass('nav-down').addClass('nav-up');
+            $('.header-top').removeClass('nav-down').addClass('nav-up');
           } else {
             // Scroll Up
             if(st + $(window).height() < $(document).height()) {
-              $('.header-bottom').removeClass('nav-up').addClass('nav-down');
+              $('.header-top').removeClass('nav-up').addClass('nav-down');
             }
           }
 
@@ -64,6 +64,25 @@
             didScroll = false;
           }
         }, 250);
+
+          var $grid = $('.grid');
+          $grid.isotope({
+              // options
+              itemSelector: '.grid-item',
+              layoutMode: 'masonry',
+              horizontalOrder: true, // new!
+              percentPosition: true,
+          });
+
+          var iso = $grid.data('isotope');
+          $grid.infiniteScroll({
+                  path: '.navigation .nav-links .nav-previous a',
+                  append: '.grid-item',
+                  status: '.scroller-status',
+                  hideNav: '.navigation',
+                  outlayer: iso
+              }
+          );
 
       }
     },

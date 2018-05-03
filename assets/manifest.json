@@ -17,11 +17,6 @@
         "scripts/customizer.js"
       ]
     },
-    "dot-notification.js": {
-      "files": [
-        "scripts/dot-notification.js"
-      ]
-    },
     "jquery.js": {
       "bower": ["jquery"]
     }

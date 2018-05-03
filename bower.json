@@ -7,20 +7,43 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
-    "css-hamburgers": "^0.9.1"
+    "css-hamburgers": "^0.9.1",
+    "bootstrap": "^4.1.0",
+    "isotope-layout": "^3.0.6",
+    "infinite-scroll": "^3.0.4"
   },
   "overrides": {
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    },
     "font-awesome": {
       "main": [
         "./scss/font-awesome.scss",
         "./fonts/*"
       ]
     },
-    "css-hamburgers" : {
+    "css-hamburgers": {
       "main": [
         "./_sass/hamburgers/hamburgers.scss"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "./scss/bootstrap.scss"
+      ]
+    },
+    "isotope-layout": {
+      "main": [
+        "./dist/isotope.pkgd.min.js"
+      ]
+    },
+    "infinite-scroll": {
+      "main": [
+        "./dist/infinite-scroll.pkgd.min.js"
       ]
     }
   }
